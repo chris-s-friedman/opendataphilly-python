@@ -54,7 +54,7 @@ def query_constructor(start_date, end_date=None):
     return base_query + " " + where_clause
 
 
-def main(start, stop, cartodb_url="https://phl.carto.com/api/v2/sql"):
+def extract(start, stop, cartodb_url="https://phl.carto.com/api/v2/sql"):
     date_list = date_list_builder(start, stop)
     responses = []
     for dates in tqdm(date_list):
